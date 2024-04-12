@@ -220,7 +220,7 @@ function App() {
     const formData = new FormData();
     formData.append('file', fileDetails);
     try {
-      const response = await fetch('http://localhost:5000/upload', {
+      const response = await fetch('https://article-summarizer-x3qq.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
@@ -294,7 +294,7 @@ function App() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/summarize', {
+      const response = await fetch('https://article-summarizer-x3qq.onrender.com/summarize', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
